@@ -34,3 +34,12 @@ class FrontPage(webapp2.RequestHandler):
     if not user:
       self.abort(403)
 
+    ep = self.request.get('endpoint', None)
+
+    if not ep:
+      self.abort(400)
+
+
+app = webapp2.WSGIApplication([
+  ('/', FrontPage),
+  ], debug=True)

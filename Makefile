@@ -1,4 +1,4 @@
-run:
+dev:
 	dev_appserver.py app
 
 uat:

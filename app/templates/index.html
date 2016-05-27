@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/page.css">
+    <meta charset="UTF-8" />
+    <title>MyTwittar</title>
+
+  </head>
+  <body>
+    <section>
+      {% if user %}
+      <p>{{ user.email() }}&nbsp;(&nbsp;<a href="{{ logout_url }}">log out</a>&nbsp;)</p>
+      {% else %}
+      <p>Annoymous &nbsp;(&nbsp;<a href="{{ login_url }}">log in</a>&nbsp;)</p>
+      {% endif %}
+    </section>
+  <div class="app">
+  </div>
+  </body>
+</html>
